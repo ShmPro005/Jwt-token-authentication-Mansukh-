@@ -34,7 +34,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 username: user.username,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                token: 'fake-jwt-token'
+                token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg'
             })
         }
 
@@ -58,7 +58,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         }
 
         function isLoggedIn() {
-            return headers.get('Authorization') === 'Bearer fake-jwt-token';
+            return headers.get('Authorization') === 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg';
         }
     }
 }
