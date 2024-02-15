@@ -1,0 +1,10 @@
+﻿<div class="card mt-4">
+    <div class="card-body">
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <p *ngIf="userRole._value.user_role == 'admin'">Admin Login</p>
+        <p *ngIf="userRole._value.user_role == 'user'">User Login</p>
+        <ul *ngIf="users">
+            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+        </ul>
+    </div>
+</div>
